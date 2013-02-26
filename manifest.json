@@ -1,0 +1,15 @@
+{
+   "content_scripts": [ {
+      "css": [ "twithingy.css" ],
+      "js": ["main.js"],
+      "matches": [ "http://twitter.com/*", "https://twitter.com/*" ]
+   } ],
+   "description": "Hola mundo",
+   "icons": {
+      "128": "icon.png"
+   },
+   "manifest_version": 2,
+   "name": "Twithingy",
+   "version": "0.1.0",
+   "web_accessible_resources": ["main.js"]
+}
