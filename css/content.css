@@ -1,20 +1,70 @@
 
-/*******************************/
-/***  Hiding stuff           ***/
-/*******************************/
+/**********************************/
+/***  Hiding stuff             ***/
+/********************************/
 
-.promptbird,	/* Have you tried a latte with your last tweet? GO AWAY, TWITTER. */
-.wtf-module,	/* WTF = Who To Follow | yeah, we don't need that */
-.trends,		/* Hides trending topics, improves your health */
-.site-footer,	/* Footer links, not useful for 99% of us */
-.topics 		/* The #discover link at top */
+.promptbird,		/* Have you tried a latte with your last tweet? GO AWAY, TWITTER. */
+.wtf-module,		/* WTF = Who To Follow | yeah, we don't need that */
+.trends,			/* Hides trending topics, improves your health */
+.site-footer,		/* Footer links, not useful for 99% of us */
+.profile-summary,	/* Your beautiful avatar and name. You may want to remember them yourself. */
+.js-mini-profile-stats-container, /* stats */
+.topics 			/* The #discover link at top */
 {
     display: none !important;
 }
 
-/*******************************/
-/***  We need to go wider    ***/
-/*******************************/
+.profile-summary {
+	display: none !important;
+}
+
+/**********************************/
+/***  Profile hider style fix  ***/
+/********************************/
+
+.js-mini-profile-stats-container {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background-color: white;
+}
+
+.dashboard .stats {
+	background: none !important;
+	border-top: none;
+}
+
+.stats a {
+	padding-bottom: 2px !important;
+}
+
+/**********************************/
+/***  Stats hider style fix    ***/
+/********************************/
+
+.tweet-user {
+	border-radius: 5px !important;
+}
+
+/**********************************/
+/***  Compose on top           ***/
+/********************************/
+
+/* Uncomment when issue #1 is solved
+
+.tweet-form .tweet-box {
+	height: 26px !important;
+	width: -webkit-calc(100% - 16px) !important;
+}
+
+.tweet-form.condensed .tweet-box {
+	height: 12px !important;
+}
+
+*/
+
+/**********************************/
+/***  We need to go wider      ***/
+/********************************/
 
 .wrapper {
     width: auto;
@@ -53,9 +103,9 @@
 }
 
 
-/*******************************/
-/***  Better compose button  ***/
-/*******************************/
+/**********************************/
+/***  Better compose button    ***/
+/********************************/
     
 #global-new-tweet-button {
 	color: white;
@@ -71,7 +121,7 @@
 	height: 18px;
 	left: -20px;
     position: relative;
-    top: -9px;
+    top: -1px;
 	width: 24px;
 }
 
@@ -81,9 +131,9 @@
 	padding-left: 22px;
 }
 
-/*******************************/
-/***  Live button (stream)   ***/
-/*******************************/
+/**********************************/
+/***  Live button (stream)     ***/
+/********************************/
 #twithingy-live-button {
 	background-color: #993333;
 	border-color: #111111;
@@ -106,9 +156,9 @@
 	color: white;
 }
 
-/*******************************/
-/***  Better hashtags        ***/
-/*******************************/
+/**********************************/
+/***  Better hashtags          ***/
+/********************************/
 
 .twitter-hashtag {
 	background-color: rgba(255,180,0,0.3);
@@ -119,9 +169,9 @@
 	color: rgb(184, 143, 15) !important;
 }
 
-/*******************************/
-/***  JavaScript helpers     ***/
-/*******************************/
+/**********************************/
+/***  JavaScript helpers       ***/
+/********************************/
 
 .new-tweets-bar {
 	display: block;
