@@ -13,7 +13,10 @@
 	"content_scripts": [ {
 		"js": [ "js/content.js" ],
 		"css": [ "css/content.css" ],
-		"matches": [ "*://www.twitter.com/*" ],
+		"matches": [
+			"*://www.twitter.com/*",
+			"*://twitter.com/*"
+		],
 		"run_at": "document_end"
 	} ],
 
