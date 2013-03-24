@@ -4,5 +4,10 @@ chrome.webNavigation.onCompleted.addListener(
 	function(details) {
 		chrome.pageAction.show(details.tabId);
 	}, 
-	{url: [{hostSuffix: 'twitter.com'}]}
+	{
+		url: [
+			{ hostEquals: 'www.twitter.com' },
+			{ hostEquals: 'twitter.com' }
+		]
+	}
 );
