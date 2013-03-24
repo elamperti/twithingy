@@ -1,38 +1,42 @@
 {
-   "manifest_version": 2,
-   "name": "Twithingy",
-   "description": "Better Twitter",
-   "version": "0.1.0",
-   
-   // Omnibox icon
-   "background": { 
-      "scripts": ["js/background.js"],
-      "persistent": false
-   },
-   
-   "content_scripts": [ {
-      "js": [ "js/content.js" ],
-      "css": [ "css/content.css" ],
-      "matches": [ "*://*.twitter.com/*" ],
-      "run_at": "document_end"
-   } ],
+	"manifest_version": 2,
+	"name": "Twithingy",
+	"description": "Better Twitter",
+	"version": "0.1.0",
+	
+	// Omnibox icon
+	"background": { 
+		"scripts": ["js/background.js"],
+		"persistent": false
+	},
+	
+	"content_scripts": [ {
+		"js": [ "js/content.js" ],
+		"css": [ "css/content.css" ],
+		"matches": [ "*://www.twitter.com/*" ],
+		"run_at": "document_end"
+	} ],
 
-   "options_page": "options.html",
-   
-   "page_action": {
-       "default_icon": {
-         "19": "images/icon19.png"
-      },
-    "default_title": "Twithingy"
-   },
-      
-   "icons": {
-      "16": "images/icon16.png",
-      "24": "images/icon24.png",
-      "48": "images/icon48.png",
-      "128": "images/icon128.png"
-   },
-   
-   "permissions": [ "tabs", "webNavigation" ]
-     
+	"options_page": "options.html",
+	
+	"page_action": {
+		 "default_icon": {
+			"19": "images/icon19.png"
+		},
+	 "default_title": "Twithingy"
+	},
+		
+	"icons": {
+		"16": "images/icon16.png",
+		"24": "images/icon24.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	
+	"permissions": [ 
+		"tabs",
+		"webNavigation",
+		"storage"
+	]
+	  
 }
