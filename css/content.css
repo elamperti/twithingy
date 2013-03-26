@@ -22,6 +22,10 @@
 /***  Profile hider style fix  ***/
 /********************************/
 
+.module.mini-profile {
+	margin-bottom: 0;
+}
+
 .js-mini-profile-stats-container {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -49,18 +53,67 @@
 /***  Compose on top           ***/
 /********************************/
 
-/* Uncomment when issue #1 is solved
-
-.tweet-form .tweet-box {
-	height: 26px !important;
+.tweet-form .tweet-box.rich-editor {
+	height: 40px !important;
 	width: -webkit-calc(100% - 16px) !important;
+	-webkit-transition: all 0.3s ease;
 }
 
-.tweet-form.condensed .tweet-box {
-	height: 12px !important;
+.tweet-form.condensed .tweet-box.rich-editor {
+	height: 18px !important;
 }
 
-*/
+.component.tweet-box .tweet-counter {
+	color: #D6D6D6;
+	text-shadow: 0 1px 1px black;
+}
+
+.component.tweet-box .tweet-counter.warn, .user_description_count.warn {
+	color: #E99E18;
+}
+
+.component.tweet-box .tweet-counter.superwarn, .user_description_count.superwarn {
+	color: #FF454A;
+	font-weight: bold;
+}
+
+.component.tweet-box {
+	/*background: -webkit-linear-gradient(top, rgba(0,0,0,0.5) 70%, rgba(0,0,0,0.2));*/
+	background-color: rgba(32,32,32,0.9);
+	border-radius: 0px 0px 4px 4px !important;
+	box-shadow: 0 2px 3px rgba(0,0,0,.25);
+	margin: -15px -20px 10px -19px;
+	padding: 12px 18px 12px 15px;
+	position: fixed;
+	width: 842px;
+	z-index: 1;
+}
+
+.dashboard, .content-main {
+	margin-top: 54px;
+}
+
+.module.mini-profile { /* This may be related to the profile hider as well */
+	border: none;
+}
+
+/**********************************/
+/***  Dark compose background  ***/
+/********************************/
+
+.component.tweet-box .tweet-box.rich-editor {
+	background-color: #262628;
+	border: 1px solid black;
+	color: #CFCFCF;
+}
+
+.component.tweet-box .tweet-box.rich-editor:focus {
+	color: #EFEFEF;
+}
+
+.component.tweet-box .rich-editor em {
+	background-color: #850808;
+}
 
 /**********************************/
 /***  We need to go wider      ***/
@@ -106,7 +159,12 @@
 /**********************************/
 /***  Better compose button    ***/
 /********************************/
-    
+
+/*
+#global-new-tweet-button {
+	display: none !important;
+}*/
+
 #global-new-tweet-button {
 	color: white;
     content: "Compose";
@@ -160,6 +218,7 @@
 /***  Better hashtags          ***/
 /********************************/
 
+/* It's annoying, disabling it for a while
 .twitter-hashtag {
 	background-color: rgba(255,180,0,0.3);
 	border-radius: 2px;
@@ -168,6 +227,7 @@
 .twitter-hashtag b, .twitter-hashtag s {
 	color: rgb(184, 143, 15) !important;
 }
+*/
 
 /**********************************/
 /***  JavaScript helpers       ***/
