@@ -1,6 +1,6 @@
 (function(document, window) {
 	var clickevt,
-		timer;
+			timer;
 	var updateTimeline = true;
 
 	var newLiveButton = document.createElement('a');
@@ -9,6 +9,7 @@
 	newLiveButton.innerHTML = 'Live stream';
 	//document.getElementsByClassName('pull-right').appendChild(newLiveButton); /* esto no anda :( */
 
+	// Auto-refresh
 	clickevt = document.createEvent('MouseEvents');
 	clickevt.initEvent('click', true, true);
 
@@ -21,5 +22,13 @@
 		}
 
 	}, 2000);
+
+	/* JS DOM fixes */
+	
+	/* home-tweet-box one line fix */
+	document.getElementById('page-container').insertBefore(
+		document.getElementsByClassName('home-tweet-box')[0],
+		document.getElementsByClassName('dashboard')[0]
+	);
 	
 })(document, window);
