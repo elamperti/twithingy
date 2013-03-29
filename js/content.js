@@ -9,26 +9,40 @@
 	newLiveButton.innerHTML = 'Live stream';
 	//document.getElementsByClassName('pull-right').appendChild(newLiveButton); /* esto no anda :( */
 
+	/* JS DOM fixes */
+	moveTweetBox();
+	document.getElementById('global-nav-home').addEventListener("click", moveTweetBox, false);
+
 	// Auto-refresh
 	clickevt = document.createEvent('MouseEvents');
 	clickevt.initEvent('click', true, true);
 
-	timer = setInterval(function() {
-		var newtweets = document.getElementsByClassName("new-tweets-bar")[0];
+	var closeAllButton = document.getElementById('close-all-button');
 
-		if(/*updateTimeline OR */newtweets !== undefined) {
-			newtweets.dispatchEvent(clickevt);
+	timer = setInterval(function() {
+		/* Blocks automatic advance when a tweet/reply is expanded */
+		updateTimeline = closeAllButton.style.display == 'none';
+		
+		if(updateTimeline) {
+			var newtweets = document.getElementsByClassName("new-tweets-bar")[0];
+			if(newtweets !== undefined) {
+				newtweets.dispatchEvent(clickevt);
+
+			}
 
 		}
 
 	}, 2000);
-
-	/* JS DOM fixes */
 	
+	
+})(document, window);
+
+/* Puts the Tweet box outside the dashboard */
+function moveTweetBox() {
 	/* home-tweet-box one line fix */
 	document.getElementById('page-container').insertBefore(
 		document.getElementsByClassName('home-tweet-box')[0],
 		document.getElementsByClassName('dashboard')[0]
 	);
-	
-})(document, window);
+
+}
