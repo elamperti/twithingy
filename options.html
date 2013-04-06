@@ -1,9 +1,37 @@
 <!doctype html>
 <html>
-<head>
-    
-</head>
-<body>
-<p>HELO</p>
-</body>
+	<head>
+		<title>Twithingy options</title>
+		<style type="text/css">
+			label {
+				display: block;
+			}
+
+		</style>
+	</head>
+
+	<body>
+		<h1>Twithingy options</h1>
+
+		<h2>Bool options</h2>
+		<div class="bool-options">
+			<label>
+				<input type="checkbox" name="composefix" />
+				Tweet bar location fix
+			</label>
+					
+			<label>
+				<input type="checkbox" name="tlrefresh" />
+				Timeline auto-refresh
+			</label>
+		</div>
+
+		<div class="buttons">
+			<button type="button" name="save">Save options</button>
+		</div>
+		<div id="status">
+		</div>
+
+		<script type="text/javascript" src="js/options.js"></script>
+	</body>
 </html>
