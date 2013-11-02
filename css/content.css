@@ -9,7 +9,8 @@
 .site-footer,		/* Footer links, not useful for 99% of us */
 .profile-summary,	/* Your beautiful avatar and name. You may want to remember them yourself. */
 .js-mini-profile-stats-container, /* stats */
-.topics 			/* The #discover link at top */
+.topics, 			/* The #discover link at top */
+.cards-media-container /* Image previews in the TL */
 {
     display: none !important;
 }
